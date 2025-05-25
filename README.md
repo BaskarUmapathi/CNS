@@ -1,6 +1,6 @@
-## EX. NO: 1 : IMPLEMENTATION OF CAESAR CIPHER
- 
-
+# EX. NO: 1 : IMPLEMENTATION OF CAESAR CIPHER
+## NAME : BASKAR U
+## REG.NO : 212223220013
 ## AIM:
 
 To implement the simple substitution technique named Caesar cipher using C language.
@@ -13,10 +13,7 @@ becomes C. To change a message back, each letter is replaced by the one three be
 
 ## EXAMPLE:
 
-
-
 ![image](https://github.com/Hemamanigandan/CNS/assets/149653568/eb9c6c43-8c80-4cdd-b9d4-91705a311c79)
-
 
 ## ALGORITHM:
 
@@ -27,8 +24,32 @@ becomes C. To change a message back, each letter is replaced by the one three be
 ### STEP-5: Display the cipher text obtained above.
 
 
-PROGRAM :-
+## PROGRAM :-
+```
+#include <stdio.h>
+#include <string.h>
+void caesarCipher(char *text, int shift) 
+{
+    for (int i = 0; text[i]; i++) 
+    {
+        if (text[i] >= 'A' && text[i] <= 'Z')
+        text[i] = ((text[i]- 'A' + shift) % 26) + 'A';
+        
+    }
+ }
+int main() 
+{
+    char text[] = "BASKAR";
+    caesarCipher(text, 3);
+    printf("Encrypted Message: %s\n", text);
+    caesarCipher(text,-3);
+    printf("Decrypted Message: %s\n", text);
+    return 0;
+    
+}
+```
+## OUTPUT:
+![image](https://github.com/user-attachments/assets/60da3d09-8cc8-41b7-a2c9-fc89fd186135)
 
-
-
-OUTPUT :-
+## RESULT:
+The program is executed successfully
